@@ -1,5 +1,10 @@
-# splc18challengecase
-Instructions for the SPLC 18 challenge case
+# SPLC18 Challenge Case Documentation
+
+Instructions for retrieving the target systems for the SPLC 18 challenge case by Paul Gazzillo, Ugur Koc, ThanhVu Nguyen, and Shiyi Wei.
+
+See the call for challenge cases here: http://splc2018.net/call-for-papers/call-for-challenge-cases/
+
+See our paper describing the challenge here: TBD
 
 ## Benchmark Programs and Datasets
 

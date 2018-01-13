@@ -15,19 +15,19 @@ The entire database can also be downloaded from https://bitbucket.org/modelsteam
 ### Axtls
 The latest version of `Axtls` is available: http://axtls.sourceforge.net
 
-To see list of available configuration options use the command TODO
+To see list of available configuration options you can check the `config/.config` file after running `make allyesconfig`.
 
 ### Busybox
 Buysbox website: https://busybox.net
 
 You can work with the version 1_28_stable which can be found in here: https://git.busybox.net/busybox/snapshot/busybox-1_28_stable.tar.gz
 
-To see list of available configuration options you can check the `.config` file after running `makde defconfig`.
+To see list of available configuration options you can check the `.config` file after running `make defconfig`.
 
 ### Linux Kernel
 linux-stable-4.14.13 which can be found in here: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 
-To see list of available configuration options use the command TODO
+To see list of available configuration options you can check the `.config` file after running `make allyesconfig`.
 
 ## Useful Program Analysis Tools
 

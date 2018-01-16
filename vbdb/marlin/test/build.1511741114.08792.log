@@ -1,0 +1,42 @@
+---Configuration: -DAUTO_BED_LEVELING -DAUTO_BED_LEVELING_GRID -DDELTA -DDISABLE_M503 -DENCODER_RATE_MULTIPLIER -DHAS_HEATER_THERMAL_PROTECTION -DPID_DEBUG -DPIDTEMP -DSDSUPPORT -DTHERMAL_RUNAWAY_PROTECTION_PERIOD=1,Start_Time:1511741114.08792
+
+/tmp/ccueLxCi.o: In function `process_commands':
+2d22902.c:(.text+0x5a): undefined reference to `assert'
+collect2: error: ld returned 1 exit status
+53be0f3.c:1:122: fatal error: util/delay.h: No such file or directory
+ #include <util/delay.h> // http://download.savannah.gnu.org/releases/avr-libc/binary-releases/ for the util/delay library
+                                                                                                                          ^
+compilation terminated.
+831016b.c:10:2: error: #endif without #if
+ #endif
+  ^
+831016b.c: In function ‘getCode’:
+831016b.c:16:5: error: too many arguments to function ‘lcd_setstatus’
+     lcd_setstatus(time, true); // ERROR
+     ^
+831016b.c:7:7: note: declared here
+  void lcd_setstatus(const char* message) {};
+       ^
+2db384a.c: In function ‘main’:
+2db384a.c:24:24: error: ‘false’ undeclared (first use in this function)
+   Config_PrintSettings(false);
+                        ^
+2db384a.c:24:24: note: each undeclared identifier is reported only once for each function it appears in
+/tmp/ccWOuceW.o: In function `main':
+31873ec.c:(.text+0x28): undefined reference to `ftostr51'
+collect2: error: ld returned 1 exit status
+8c4377d.c: In function ‘manage_heater’:
+8c4377d.c:3:27: error: called object is not a function or function pointer
+ #define SERIAL_ECHO_START (serialprint(echomagic))
+                           ^
+8c4377d.c:16:2: note: in expansion of macro ‘SERIAL_ECHO_START’
+  SERIAL_ECHO_START(" PIDDEBUG "); // ERROR
+  ^
+fdac8f6.c: In function ‘Config_ResetDefault’:
+fdac8f6.c:9:20: error: ‘Z_PROBE_OFFSET_FROM_EXTRUDER’ undeclared (first use in this function)
+  zprobe_zoffset = -Z_PROBE_OFFSET_FROM_EXTRUDER; // ERROR
+                    ^
+fdac8f6.c:9:20: note: each undeclared identifier is reported only once for each function it appears in
+
+---Test Completed, Total Time:0.728---
+

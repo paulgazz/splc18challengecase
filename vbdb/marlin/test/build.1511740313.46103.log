@@ -1,0 +1,40 @@
+---Configuration: -DAUTO_BED_LEVELING_GRID -DBABYSTEPPING -DDELTA -DENABLE_AUTO_BED_LEVELING -DHAS_BED_THERMAL_PROTECTION -DMARLIN_H -DTEMP_RESIDENCY_TIME=30 -DTEMP_SENSOR_0=1 -DTHERMAL_RUNAWAY_PROTECTION_PERIOD=-1 -DULTRA_LCD,Start_Time:1511740313.46103
+
+/tmp/cc9jimzt.o: In function `main':
+3024821.c:(.text+0x4e): undefined reference to `thermal_runaway_protection'
+collect2: error: ld returned 1 exit status
+53be0f3.c:1:122: fatal error: util/delay.h: No such file or directory
+ #include <util/delay.h> // http://download.savannah.gnu.org/releases/avr-libc/binary-releases/ for the util/delay library
+                                                                                                                          ^
+compilation terminated.
+831016b.c:10:2: error: #endif without #if
+ #endif
+  ^
+/tmp/ccnVJTGF.o: In function `main':
+a7fc1f8.c:(.text+0x1a): undefined reference to `cardreader'
+collect2: error: ld returned 1 exit status
+fc3c76f.c:11:12: error: unknown type name ‘TRState’
+     static TRState thermal_runaway_bed_state_machine = { TRInactive, TRInactive, TRInactive, TRInactive };
+            ^
+2db384a.c:11:27: error: unknown type name ‘bool’
+ void Config_PrintSettings(bool forReplay){
+                           ^
+2db384a.c: In function ‘main’:
+2db384a.c:24:24: error: ‘false’ undeclared (first use in this function)
+   Config_PrintSettings(false);
+                        ^
+2db384a.c:24:24: note: each undeclared identifier is reported only once for each function it appears in
+31873ec.c: In function ‘ftostr51’:
+31873ec.c:7:3: error: unknown type name ‘int16_t’
+   int16_t xx=x*10;
+   ^
+31873ec.c:8:3: error: ‘conv’ undeclared (first use in this function)
+   conv[0]=(xx>=0)?'+':'-';
+   ^
+31873ec.c:8:3: note: each undeclared identifier is reported only once for each function it appears in
+/tmp/ccssYn2X.o: In function `lcd_tune_menu':
+b8e79dc.c:(.text+0x24): undefined reference to `MENU_MULTIPLIER_ITEM_EDIT'
+collect2: error: ld returned 1 exit status
+
+---Test Completed, Total Time:0.709---
+

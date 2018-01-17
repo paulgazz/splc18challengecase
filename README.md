@@ -34,6 +34,14 @@ linux-stable-4.14.13 which can be found in here: https://git.kernel.org/pub/scm/
 
 To see list of available configuration options you can check the `.config` file after running `make allyesconfig`.
 
+
+## Configuring the Target Systems
+
+For the variability bugs database source files, `gcc -E -D CONFIG_VAR1 -D CONFIG_VAR2 ...` can be used to configure the source code with the C preprocessor.
+
+To configure axTLS, BusyBox, and Linux, first run `allyesconfig` (or `defconfig`).  Then replace the `.config` file with the one from your solution program's output and run `make oldconfig`.  The system is now ready to be built with `make` under the new configuration.
+
+
 ## Useful Program Analysis Tools
 
 ### KMax

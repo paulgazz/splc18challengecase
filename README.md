@@ -11,16 +11,16 @@ See our paper describing the challenge here: TBD
 ### Variability Bugs Database (Abal et. al ASE14)
 This is a database of 98 software bugs occurring only under specific configurations, i.e., variability bugs. To create this database, Abal et. al (ASE14) studied software repositories of Linux, Busybox, Marlin, and Apache Httpd Server.
 
-The database is in here: http://vbdb.itu.dk/#search
+The online database is in here: http://vbdb.itu.dk/#search
 
 In each entry, there is a table providing detailed information of the bug, such as the bug type and specific configurations that are involved. To find the configurations that lead to these bugs, there are two afternatives you could use in your experiments: **Simplified bug** and **Single function bug**
 
-The entire database can also be downloaded from https://bitbucket.org/modelsteam/vbdb
+In this repository, we provide a processed version of this database to be used for the easy challenge (under the **vbdb** directory). For Linux, Busybox, and Marlin, we modified the code snippets under the simple directory to fix some compilation issues and to make the bug easier to observe (by adding assertions etc.). Moreover, for these programs, we also *include options_list.txt* files which include list of options that appear in all bug reports of that program. You should use these lists as the configuration space.
 
 ### Axtls
 The latest version of `Axtls` is available: http://axtls.sourceforge.net
 
-To see list of available configuration options you can check the `config/.config` file after running `make allyesconfig`.
+To see list of available configuration options you can check the `config/.config` file after running `make allyesconfig`. An example `.config` file can be found under **examples** directory
 
 ### Busybox
 Buysbox website: https://busybox.net
@@ -44,7 +44,7 @@ KBuildMiner can be found iin here: https://github.com/ckaestne/KBuildMiner
 
 ### iTree
 
-TODO
+Contact authors of iTree paper (ICSE2014).
 
 ### iGen
 iGen can be found in here: https://bitbucket.org/nguyenthanhvuh/igen/wiki/Home

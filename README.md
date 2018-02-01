@@ -41,6 +41,9 @@ For the variability bugs database source files, `gcc -E -D CONFIG_VAR1 -D CONFIG
 
 To configure axTLS, BusyBox, and Linux, first run `allyesconfig` (or `defconfig`).  Then replace the `.config` file with the one from your solution program's output and run `make oldconfig`.  The system is now ready to be built with `make` under the new configuration.
 
+## Evaluation
+
+The solution programs will be evaluated on an 8-core, 2.90GHz processor with 32GB of RAM running a Linux distribution.  The challenge evaluation period is about three weeks, so solution that cannot finish in a substantially.  Please let the evaluation committee know of any special computing resource requirements (special machinery, runs requiring more than a day, etc).
 
 ## Useful Program Analysis Tools
 

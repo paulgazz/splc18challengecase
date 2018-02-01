@@ -8,7 +8,7 @@ See our paper describing the challenge here: TBD
 
 ## Benchmark Programs and Datasets
 
-### Variability Bugs Database (Abal et. al ASE14)
+### Easy - Variability Bugs Database (Abal et. al ASE14)
 This is a database of 98 software bugs occurring only under specific configurations, i.e., variability bugs. To create this database, Abal et. al (ASE14) studied software repositories of Linux, Busybox, Marlin, and Apache Httpd Server.
 
 The online database is in here: http://vbdb.itu.dk/#search
@@ -17,19 +17,19 @@ In each entry, there is a table providing detailed information of the bug, such 
 
 In this repository, we provide a processed version of this database to be used for the easy challenge (under the **vbdb** directory). For Linux, Busybox, and Marlin, we modified the code snippets under the simple directory to fix some compilation issues and to make the bug easier to observe (by adding assertions etc.). Moreover, for these programs, we also *include options_list.txt* files which include list of options that appear in all bug reports of that program. You should use these lists as the configuration space.
 
-### Axtls
+### Medium - Axtls
 The latest version of `Axtls` is available: http://axtls.sourceforge.net
 
 To see list of available configuration options you can check the `config/.config` file after running `make allyesconfig`. An example `.config` file can be found under **examples** directory
 
-### Busybox
+### Hard - Busybox
 Buysbox website: https://busybox.net
 
 You can work with the version 1_28_stable which can be found in here: https://git.busybox.net/busybox/snapshot/busybox-1_28_stable.tar.gz
 
 To see list of available configuration options you can check the `.config` file after running `make defconfig`.
 
-### Linux Kernel
+### Ultimate - Linux Kernel
 linux-stable-4.14.13 which can be found in here: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 
 To see list of available configuration options you can check the `.config` file after running `make allyesconfig`.

@@ -11,11 +11,23 @@ See our paper describing the challenge here: TBD
 ### Easy - Variability Bugs Database (Abal et. al ASE14)
 This is a database of 98 software bugs occurring only under specific configurations, i.e., variability bugs. To create this database, Abal et. al (ASE14) studied software repositories of Linux, Busybox, Marlin, and Apache Httpd Server.
 
-The online database is in here: http://vbdb.itu.dk/#search
+The online database is in here: http://vbdb.itu.dk/#search. In each entry, there is a table providing detailed information of the bug, such as the bug type and specific configurations that are involved. To find the configurations that lead to these bugs, there are two afternatives you could use in your experiments: **Simplified bug** and **Single function bug**
 
-In each entry, there is a table providing detailed information of the bug, such as the bug type and specific configurations that are involved. To find the configurations that lead to these bugs, there are two afternatives you could use in your experiments: **Simplified bug** and **Single function bug**
+In this challenge, you are asked to find configrations for each the variability bug location in *Linux, Busybox*, and *Marlin*. Here, we provide a processed version of this database under the **vbdb** directory. For these programs, we modified the code snippets under the simple directory to resolve some compilation issues and to make the bug easier to observe (by adding assertions etc.). Moreover, for these programs, we also *include options_list.txt* files which include list of options that appear in all bug reports of that program. You should use these lists as the configuration space.
 
-In this repository, we provide a processed version of this database to be used for the easy challenge (under the **vbdb** directory). For Linux, Busybox, and Marlin, we modified the code snippets under the simple directory to fix some compilation issues and to make the bug easier to observe (by adding assertions etc.). Moreover, for these programs, we also *include options_list.txt* files which include list of options that appear in all bug reports of that program. You should use these lists as the configuration space.
+The *all_locations.txt* file contain all bug locations in question in this challenge.
+
+#### Testing
+
+Once you come up with a configuration for a variability bug with your approach, you can test it by preprocessing  the program with the configration flags that appear in the configration you generated + the *-E* flag. I.e.,
+
+`gcc -E -Denabled_config_option1 -Denabled_config_option2 ... simple_code_snippet.c`
+
+This will generate pre-processeed c file. In this c file, you should see the bug location. However, having this location does not necessarily mean the bug is actually in there (in some cases). To test this, you can actually compile the program
+
+`gcc -Denabled_config_option1 -Denabled_config_option2 ... simple_code_snippet.c -o a.out`
+
+Then, if running *a.out* results in the error mentioned in the database, this means you found a configuration which leads to the variability bug (in some cases, your config might differ from what is reported in the database).
 
 ### Medium - Axtls
 The latest version of `Axtls` is available: http://axtls.sourceforge.net

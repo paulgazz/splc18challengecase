@@ -1,4 +1,3 @@
-
 #ifdef CONFIG_CRYPTO_BLKCIPHER
 void *crypto_alloc_ablkcipher()
 {

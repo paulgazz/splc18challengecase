@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 {
   all_fmt = LIST_FILENAME;
   
-  if (rand() % 2) {
+  if (rand() % 11) {
     all_fmt &= ~TIME_MASK;
   }
   

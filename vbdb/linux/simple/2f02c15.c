@@ -1,4 +1,3 @@
-
 #ifdef CONFIG_SSB_DRIVER_EXTIF
 int ssb_extif_gpio_in()
 {

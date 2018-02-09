@@ -4,7 +4,7 @@ Instructions for retrieving the target systems for the SPLC 18 challenge case by
 
 See the call for challenge cases here: http://splc2018.net/call-for-papers/call-for-challenge-cases/
 
-See our paper describing the challenge here: TBD
+See our paper describing the challenge here: http://splc2018.net/wp-content/uploads/2018/02/SPLC18_Challenge_Case4.pdf
 
 ## Benchmark Programs and Datasets
 
